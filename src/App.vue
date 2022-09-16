@@ -1,26 +1,121 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- <div v-if="movies.length">
+    <MoviesList :movies="movies" />
+  </div> -->
+  <Genre />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MoviesList from './components/MoviesList';
+import Genre from './components/Genre.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MoviesList,
+    Genre
+  },
+
+  data() {
+    return {
+      movies: []
+    };
+  },
+
+  async created() {
+    const response = await fetch('https://api.tvmaze.com/search/shows?q=girls');
+    const data = await response.json();
+
+    this.movies = data;
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --orange: hsl(26, 100%, 55%);
+  --pale-orange: hsl(25, 100%, 94%);
+  --very-vark-blue: hsl(220, 13%, 13%);
+  --dark-grayish-blue: hsl(219, 9%, 45%);
+  --grayish-blue: hsl(220, 14%, 75%);
+  --light-grayish-blue: hsl(223, 64%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-background: #1f2933;
+  --transition-ease: 0.5s ease;
+  --yellow-green: #8cbd52;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: var(--white);
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit; /* no underline */
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--dark-background);
+}
+
+/* UTILITY CLASSES */
+.rounded-border-0 {
+  border-radius: 0.5rem;
+}
+
+.rounded-border-1 {
+  border-radius: 1rem;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+  justify-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.flex-basis-100 {
+  flex-basis: 100%;
+}
+
+.d-none {
+  display: none;
+}
+
+.p-5 {
+  padding: 10px;
 }
 </style>
