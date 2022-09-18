@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import Movies from './Movies.vue';
-import { mockMovie } from './mock';
+import { mockMovie } from '@/mocks/mock';
 import MoviesList from './components/MoviesList/MoviesList.vue';
 
 describe('Movies', () => {

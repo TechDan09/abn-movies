@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import MovieInfo from './MovieInfo.vue';
 import GenreChip from '@/components/GenreChip/GenreChip.vue';
-import { mockMovie } from '../../mock';
+import { mockMovie } from '@/mocks/mock';
 
 describe('MovieInfo', () => {
   it('mounts correctly', () => {

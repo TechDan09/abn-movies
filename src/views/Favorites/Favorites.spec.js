@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import Favorites from './Favorites.vue';
-import MovieCard from '@/components/MovieCard.vue';
+import MovieCard from '@/components/MovieCard/MovieCard.vue';
 
 describe('Favorites', () => {
   it('renders correctly', () => {
