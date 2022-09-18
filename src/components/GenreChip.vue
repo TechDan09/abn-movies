@@ -17,6 +17,6 @@ export default {
 .genre {
   background-color: var(--orange);
   padding: 0.2rem 0.5rem;
-  font-size: 0.7rem;
+  font-size: 1.1rem;
 }
 </style>

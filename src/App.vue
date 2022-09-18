@@ -1,38 +1,23 @@
 <template>
-  <!-- <div v-if="movies.length">
-    <MoviesList :movies="movies" />
-  </div> -->
-  <Genre />
+  <Header />
+  <router-view></router-view>
 </template>
 
 <script>
-import MoviesList from './components/MoviesList';
-import Genre from './components/Genre.vue';
-
+import Header from './components/layout/Header/Header.vue';
 export default {
   name: 'App',
-  components: {
-    MoviesList,
-    Genre
-  },
-
-  data() {
-    return {
-      movies: []
-    };
-  },
-
-  async created() {
-    const response = await fetch('https://api.tvmaze.com/search/shows?q=girls');
-    const data = await response.json();
-
-    this.movies = data;
-  }
+  components: { Header }
 };
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
 
 :root {
   --orange: hsl(26, 100%, 55%);
@@ -46,6 +31,10 @@ export default {
   --dark-background: #1f2933;
   --transition-ease: 0.5s ease;
   --yellow-green: #8cbd52;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 * {
@@ -82,6 +71,12 @@ body {
 }
 
 /* UTILITY CLASSES */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .rounded-border-0 {
   border-radius: 0.5rem;
 }
@@ -115,7 +110,11 @@ body {
   display: none;
 }
 
-.p-5 {
+.p-10 {
   padding: 10px;
+}
+
+.m-10 {
+  margin: 10px;
 }
 </style>

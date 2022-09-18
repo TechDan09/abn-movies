@@ -1,5 +1,5 @@
 <template>
-  <button class="btn">
+  <button :class="[extractClass(), 'btn']">
     <slot>View More</slot>
   </button>
 </template>
@@ -10,17 +10,36 @@ export default {
   props: {
     title: String,
     variant: String
+  },
+  methods: {
+    extractClass() {
+      if (this.variant === 'secondary') {
+        return 'btn__secondary';
+      }
+
+      return 'btn__primary';
+    }
   }
 };
 </script>
 
-<style scoped>
+<style>
 .btn {
-  background: var(--orange);
-  padding: 1rem 1rem;
+  padding: 1rem 1.6rem;
   border: 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.btn__primary {
+  background: var(--orange);
+}
+
+.btn__secondary {
+  background: transparent;
+  border: 1px solid var(--orange);
+  color: var(--orange);
 }
 
 .btn:hover {
