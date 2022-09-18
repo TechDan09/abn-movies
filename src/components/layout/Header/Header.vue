@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h1 class="m-10">Welcome To ABN Movies</h1>
+    <router-link to="/"><h1>Welcome To ABN Movies</h1></router-link>
     <div class="search">
       <BaseInput
         class="search__input"

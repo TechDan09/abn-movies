@@ -1,5 +1,5 @@
 <template>
-  <Card class="genre__card">
+  <Card class="genre__card" @click="viewGenre(genre.title)">
     <h2>{{ genre.title }} Shows</h2>
     <Button variant="secondary">View Top Shows</Button>
     <Image className="genre__card--img" :src="genre.coverImage" />
@@ -15,6 +15,11 @@ export default {
   components: { Image, Button, Card },
   props: {
     genre: Object
+  },
+  methods: {
+    viewGenre(genreName) {
+      this.$router.push(`/movies/?q=${genreName}`);
+    }
   }
 };
 </script>

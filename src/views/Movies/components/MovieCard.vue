@@ -1,7 +1,7 @@
 <template>
-  <div v-if="movie.show.image">
-    <Card class="movie__card" @click="viewMovieDetails(movie.show.id)">
-      <img :src="movie.show.image.medium" :alt="movie.show.name" class="movie_card--img" />
+  <div v-if="movie && movie.image">
+    <Card class="movie__card" @click="viewMovieDetails(movie.id)">
+      <img :src="movie.image.medium" :alt="movie.name" class="movie_card--img" />
       <MovieInfo :movie="movie" />
     </Card>
   </div>

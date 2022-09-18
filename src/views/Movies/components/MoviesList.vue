@@ -1,6 +1,6 @@
 <template>
-  <div class="movies d-flex justify-center" v-if="movies">
-    <MovieCard :movie="movie" v-for="movie in movies" :key="movie.id" />
+  <div class="movie__list" v-if="movies.length">
+    <MovieCard :movie="movie.show" v-for="movie in movies" :key="movie.id" />
   </div>
 </template>
 
@@ -10,17 +10,21 @@ import MovieCard from './MovieCard';
 export default {
   name: 'MoviesList',
   props: {
-    movies: Array,
-    test: false
+    movies: Array
   },
   components: {
     MovieCard
+  },
+  created() {
+    console.log(this.movies);
   }
 };
 </script>
 
 <style scoped>
-.movies {
+.movie__list {
+  display: flex;
+  justify-content: center;
   padding: 1rem 0;
   flex-wrap: wrap;
   gap: 2rem;
