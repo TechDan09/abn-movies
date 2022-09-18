@@ -1,13 +1,16 @@
 <template>
   <Header />
+  <Footer />
   <router-view></router-view>
 </template>
 
 <script>
 import Header from './components/layout/Header/Header.vue';
+import IconButton from './components/IconButton.vue';
+import Footer from './components/layout/Footer/Footer.vue';
 export default {
   name: 'App',
-  components: { Header }
+  components: { Header, IconButton, Footer }
 };
 </script>
 

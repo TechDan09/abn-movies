@@ -30,6 +30,7 @@ export default {
   font-size: 1.2rem;
   border-radius: 0.3rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn__primary {

@@ -1,15 +1,23 @@
 <template>
   <div class="single__movie-actions">
-    <a :href="movie.officialSite" class="btn btn__primary" target="_blank">Watch Trailer</a>
-    <button to="/" class="btn btn__secondary" @click="toggleList(movie.id)">
+    <a
+      :href="movie.officialSite"
+      class="btn btn__primary"
+      target="_blank"
+    >
+      Watch Trailer
+      <fa icon="arrow-up-right-from-square" />
+    </a>
+    <Button to="/" variant="secondary" @click="toggleList(movie.id)">
       {{ isFavorite ? 'Remove From List' : 'Add To List' }}
-    </button>
+    </Button>
   </div>
 </template>
 
 <script>
 import { toggleFavorites } from '../services/toggle-favorites';
 import { isInLocalStorage } from '../services/is-in-local-storage';
+import Button from '@/components/Button.vue';
 
 export default {
   name: 'MovieActions',
@@ -31,7 +39,8 @@ export default {
     const id = this.$route.params.id;
     const { isFavorite } = isInLocalStorage(id);
     this.isFavorite = isFavorite;
-  }
+  },
+  components: { Button }
 };
 </script>
 

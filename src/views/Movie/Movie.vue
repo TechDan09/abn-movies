@@ -26,8 +26,15 @@ export default {
       movie: []
     };
   },
+
   async created() {
     this.movie = await getMovie(this.$route.params.id);
+  },
+
+  watch: {
+    async $route() {
+      this.movie = await getMovie(this.$route.params.id);
+    }
   }
 };
 </script>
