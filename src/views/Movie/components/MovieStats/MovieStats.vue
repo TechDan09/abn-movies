@@ -3,7 +3,9 @@
     <p class="rating" v-if="movie.rating">
       <i class="fa-regular fa-star icon"></i> Rating: {{ movie.rating.average }}
     </p>
-    <p class="duration"><i class="fa-regular fa-clock icon"></i> Duration: {{ movie.runtime }}</p>
+    <p class="duration">
+      <i class="fa-regular fa-clock icon"></i> Duration: {{ movie.runtime }}
+    </p>
     <p class="year">
       <i class="fa-regular fa-calendar icon"></i> Release Date:
       {{ extractYear(movie.premiered) }}
@@ -26,12 +28,5 @@ export default {
 </script>
 
 <style scoped>
-.single__movie-stats {
-  display: flex;
-  gap: 1rem;
-}
-
-.single__movie-stats .icon {
-  color: var(--orange);
-}
+@import './style.css';
 </style>

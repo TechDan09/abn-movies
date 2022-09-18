@@ -1,6 +1,6 @@
 <template>
   <input
-    type="text"
+    :type="type"
     :placeholder="label"
     :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'BaseIx`nput',
+  name: 'BaseInput',
   props: {
     label: {
       type: String,
@@ -19,22 +19,15 @@ export default {
     modelValue: {
       type: String,
       default: ''
+    },
+    type: {
+      type: String,
+      default: 'text'
     }
   }
 };
 </script>
 
 <style>
-input {
-  padding: 1.2rem;
-  color: var(--black);
-  border: none;
-  border-radius: 0.3rem;
-  font-size: 1.3rem;
-}
-
-input:focus {
-  border: none;
-  outline: none;
-}
+@import './style.css';
 </style>

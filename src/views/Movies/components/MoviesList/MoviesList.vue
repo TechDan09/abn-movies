@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MovieCard from './MovieCard';
+import MovieCard from '@/components/MovieCard/MovieCard.vue';
 
 export default {
   name: 'MoviesList',
@@ -14,19 +14,10 @@ export default {
   },
   components: {
     MovieCard
-  },
-  created() {
-    console.log(this.movies);
   }
 };
 </script>
 
 <style scoped>
-.movie__list {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 0;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
+@import './style.css';
 </style>

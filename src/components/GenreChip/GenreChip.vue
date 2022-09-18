@@ -14,9 +14,5 @@ export default {
 </script>
 
 <style scoped>
-.genre {
-  background-color: var(--orange);
-  padding: 0.2rem 0.5rem;
-  font-size: 1.1rem;
-}
+@import './style.css';
 </style>

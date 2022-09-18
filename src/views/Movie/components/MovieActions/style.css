@@ -1,0 +1,4 @@
+.single__movie-actions {
+  display: flex;
+  gap: 1.4rem;
+}

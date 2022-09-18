@@ -6,118 +6,13 @@
 
 <script>
 import Header from './components/layout/Header/Header.vue';
-import IconButton from './components/IconButton.vue';
 import Footer from './components/layout/Footer/Footer.vue';
 export default {
   name: 'App',
-  components: { Header, IconButton, Footer }
+  components: { Header, Footer }
 };
 </script>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-:root {
-  --orange: hsl(26, 100%, 55%);
-  --pale-orange: hsl(25, 100%, 94%);
-  --very-vark-blue: hsl(220, 13%, 13%);
-  --dark-grayish-blue: hsl(219, 9%, 45%);
-  --grayish-blue: hsl(220, 14%, 75%);
-  --light-grayish-blue: hsl(223, 64%, 98%);
-  --white: hsl(0, 0%, 100%);
-  --black: hsl(0, 0%, 0%);
-  --dark-background: #1f2933;
-  --transition-ease: 0.5s ease;
-  --yellow-green: #8cbd52;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Kumbh Sans', sans-serif;
-  color: var(--white);
-  box-sizing: border-box;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit; /* no underline */
-}
-
-img {
-  max-width: 100%;
-}
-
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  text-indent: 0;
-  list-style-type: none;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-body {
-  background-color: var(--dark-background);
-}
-
-/* UTILITY CLASSES */
-
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.rounded-border-0 {
-  border-radius: 0.5rem;
-}
-
-.rounded-border-1 {
-  border-radius: 1rem;
-}
-
-.d-grid {
-  display: grid;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-  justify-items: center;
-}
-
-.gap-1 {
-  gap: 1rem;
-}
-
-.flex-basis-100 {
-  flex-basis: 100%;
-}
-
-.d-none {
-  display: none;
-}
-
-.p-10 {
-  padding: 10px;
-}
-
-.m-10 {
-  margin: 10px;
-}
+<style lang="css">
+@import '@/style/base.css';
 </style>

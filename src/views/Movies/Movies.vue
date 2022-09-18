@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import MoviesList from './components/MoviesList';
+import MoviesList from './components/MoviesList/MoviesList.vue';
 import { searchMovie } from './data/get-movies';
 
 export default {

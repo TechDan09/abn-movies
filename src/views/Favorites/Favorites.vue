@@ -8,19 +8,22 @@
 </template>
 
 <script>
-import MovieCard from '../Movies/components/MovieCard';
+import MovieCard from '@/components/MovieCard/MovieCard.vue';
 import { getFavoriteMovies } from './data/get-favorite-movies';
 
 export default {
   name: 'Favorites',
+
   components: {
     MovieCard
   },
+
   data() {
     return {
       movies: []
     };
   },
+
   async created() {
     this.movies = await getFavoriteMovies();
   }
@@ -28,17 +31,5 @@ export default {
 </script>
 
 <style scoped>
-.favorite__movies-movie-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.favorite__movies h1 {
-  font-size: 1.5rem;
-  text-align: center;
-}
+@import './style.css';
 </style>

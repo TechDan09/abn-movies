@@ -1,0 +1,13 @@
+.icon {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.icon svg {
+  font-size: 2.5rem;
+}

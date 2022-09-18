@@ -1,0 +1,23 @@
+.genre__card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 20rem;
+}
+
+.genre__card--img {
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.genre__card h2 {
+  margin: 1rem auto;
+  font-size: 1.7rem;
+}

@@ -1,0 +1,8 @@
+.single__movie-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.single__movie-stats .icon {
+  color: var(--orange);
+}

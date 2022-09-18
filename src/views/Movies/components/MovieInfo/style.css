@@ -1,0 +1,22 @@
+.movie__info {
+  padding: 10px;
+}
+
+.movie__info .title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.movie__info .movie__info-details {
+  font-size: 1.3rem;
+  color: var(--light-grayish-blue);
+  padding-bottom: 0.3rem;
+}
+
+.movie__info-year,
+.movie__info-year-runtime,
+.movie__info-language,
+.movie__info-type {
+  font-size: 1.3rem;
+  line-height: 1.92rem;
+}

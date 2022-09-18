@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import GenreList from './components/GenreList.vue';
+import GenreList from './components/GenreList/GenreList.vue';
 
 export default {
   name: 'Home',
