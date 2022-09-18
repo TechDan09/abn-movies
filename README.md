@@ -36,12 +36,19 @@ Code files are separated into different folders in the `src` directory
   - An example of view folder structure can be seen below for a sample page: `Home.vue`
 
   view/
+  
   ├─ container/
+  
   ├─ components/
+  
   ├─ data/
+  
   ├─ services/
+  
   ├─ Home.vue
+  
   ├─ Home.spec.js
+  
   ├─ style.css
 
   - data: This holds all api calls that are used within this view or any related component
